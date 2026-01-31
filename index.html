@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Green Living Harian - Aplikasi Lengkap</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-green-50 text-gray-800 min-h-screen p-6">
+
+  <nav class="w-full max-w-6xl mx-auto mb-6">
+    <ul class="flex justify-around bg-green-100 rounded-lg p-4 text-green-800 font-semibold text-xs sm:text-sm flex-wrap gap-2">
+      <li><button onclick="showSection('home')" class="hover:underline hover:text-green-700">🌿 Pengertian</button></li>
+      <li><button onclick="showSection('checklist')" class="hover:underline hover:text-green-700">✅ Checklist</button></li>
+      <li><button onclick="showSection('pemilahan')" class="hover:underline hover:text-green-700">♻️ Sampah</button></li>
+      <li><button onclick="showSection('komitmen')" class="hover:underline hover:text-green-700">🍃 Komitmen</button></li>
+      <li><button onclick="showSection('makan')" class="hover:underline hover:text-green-700">🍽️ Makan</button></li>
+      <li><button onclick="showSection('olahraga')" class="hover:underline hover:text-green-700">🧘 Olahraga</button></li>
+    </ul>
+  </nav>
+
+  <div class="w-full max-w-6xl mx-auto">
+
+    <section id="home" class="section">
+      <header class="text-center mb-8">
+        <h1 class="text-4xl font-bold text-green-800 mb-2">🌿 Green Living Harian</h1>
+        <p class="text-lg text-green-700">Aplikasi Edukasi & Aksi Ramah Lingkungan</p>
+      </header>
+
+      <main class="bg-white p-8 rounded-lg shadow space-y-6">
+        <section>
+          <h2 class="text-2xl font-semibold text-green-700 mb-2">📘 Pengertian</h2>
+          <p>
+            <strong>Green Living Harian</strong> adalah aplikasi web interaktif yang dirancang untuk membantu pengguna menerapkan gaya hidup ramah lingkungan dalam aktivitas sehari-hari. Aplikasi ini menggabungkan edukasi, pelacakan kebiasaan, dan panduan praktis untuk mendorong perubahan perilaku yang berkelanjutan.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-semibold text-green-700 mb-2">🎯 Fungsi Utama</h2>
+          <ul class="list-disc list-inside space-y-2">
+            <li><strong>Checklist Komitmen Hijau:</strong> Mencatat dan melacak tindakan ramah lingkungan harian seperti mematikan lampu, membawa botol minum sendiri, dan menggunakan transportasi umum.</li>
+            <li><strong>Panduan Pemilahan Sampah:</strong> Memberikan edukasi dan form interaktif untuk membantu pengguna mengenali jenis sampah (organik, anorganik, B3).</li>
+            <li><strong>Panduan Makan Sehat:</strong> Menyediakan checklist makanan sehat untuk sarapan, makan siang, dan makan malam yang mendukung gaya hidup berkelanjutan.</li>
+            <li><strong>Jadwal Olahraga Ringan:</strong> Menyusun rutinitas olahraga mingguan yang ringan dan mudah dilakukan di rumah.</li>
+            <li><strong>Penyimpanan Data Lokal:</strong> Semua data pengguna disimpan di perangkat masing-masing menggunakan Local Storage, sehingga aman dan privat.</li>
+          </ul>
+        </section>
+
+        <footer class="text-center text-sm text-gray-500 pt-6 border-t">
+          Dibuat untuk mendorong gaya hidup berkelanjutan 🌏
+        </footer>
+      </main>
+    </section>
+
+    <section id="checklist" class="section hidden">
+      <h1 class="text-3xl font-bold text-green-800 mb-6 text-center">✅ Checklist Green Living Harian</h1>
+      <div class="bg-white shadow-md rounded-lg p-6 max-w-2xl mx-auto">
+        <ul id="checklist" class="space-y-3">
+        </ul>
+        <div class="mt-6">
+            <div class="w-full bg-gray-200 rounded-full h-4">
+              <div id="progressBar" class="bg-green-500 h-4 rounded-full"></div>
+            </div>
+          <p class="text-sm text-gray-600 mt-2 text-center" id="progressText">0% selesai</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pemilahan" class="section hidden">
+      <h1 class="text-2xl font-bold text-green-800 mb-6 text-center">♻️ Panduan Pemilahan Sampah</h1>
+      <div class="grid grid-cols-1 gap-6 max-w-2xl mx-auto">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h2 class="text-lg font-semibold text-green-700 mb-2">🟢 Sampah Organik</h2>
+          <p class="text-gray-700">Sampah yang mudah terurai, seperti sisa makanan, daun kering, kulit buah.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h2 class="text-lg font-semibold text-yellow-600 mb-2">🟡 Sampah Anorganik</h2>
+          <p class="text-gray-700">Sampah yang sulit terurai, seperti plastik, kaleng, kaca, kertas bekas.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h2 class="text-lg font-semibold text-red-600 mb-2">🔴 Sampah B3 (Bahan Berbahaya & Beracun)</h2>
+          <p class="text-gray-700">Contohnya baterai bekas, obat kadaluarsa, lampu neon, cat, dan pestisida.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="komitmen" class="section hidden">
+      <h1 class="text-3xl font-bold text-green-800 mb-6 text-center">🍃 Komitmen Hijau Harian</h1>
+      <div class="bg-white shadow-md rounded-lg p-6 max-w-2xl mx-auto">
+        <form id="taskForm" class="flex mb-4 gap-2">
+          <input type="text" id="taskInput" placeholder="Tambah komitmen hijau..." class="flex-grow p-2 border rounded" />
+          <button type="submit" class="bg-green-600 text-white px-4 rounded hover:bg-green-700">Tambah</button>
+        </form>
+
+        <ul id="taskList" class="space-y-3"></ul>
+      </div>
+    </section>
+
+    <section id="makan" class="section hidden">
+      <h1 class="text-3xl font-bold text-green-800 mb-2 text-center">🍽️ Panduan Makan Sehat</h1>
+      <p class="text-center text-green-600 mb-6">Kalender menu sehat untuk seminggu</p>
+      <div class="overflow-x-auto max-w-6xl mx-auto">
+        <table class="w-full table-auto border border-green-300 bg-white shadow rounded-lg">
+          <thead class="bg-green-100 text-green-800">
+            <tr>
+              <th class="p-3 border">Hari</th>
+              <th class="p-3 border">Sarapan</th>
+              <th class="p-3 border">Makan Siang</th>
+              <th class="p-3 border">Makan Malam</th>
+            </tr>
+          </thead>
+          <tbody class="text-sm">
+            <tr class="hover:bg-green-50">
+              <td class="p-3 border font-semibold">Senin</td>
+              <td class="p-3 border">Oatmeal + buah segar</td>
+              <td class="p-3 border">Nasi merah + sayur bening + tempe</td>
+              <td class="p-3 border">Sup ayam + brokoli rebus</td>
+            </tr>
+            <tr class="hover:bg-green-50">
+              <td class="p-3 border font-semibold">Selasa</td>
+              <td class="p-3 border">Roti gandum + telur rebus</td>
+              <td class="p-3 border">Gado-gado + air putih</td>
+              <td class="p-3 border">Tumis tahu + nasi jagung</td>
+            </tr>
+            <tr class="hover:bg-green-50">
+              <td class="p-3 border font-semibold">Rabu</td>
+              <td class="p-3 border">Smoothie pisang + granola</td>
+              <td class="p-3 border">Soto ayam + nasi putih</td>
+              <td class="p-3 border">Sayur asem + ikan bakar</td>
+            </tr>
+            <tr class="hover:bg-green-50">
+              <td class="p-3 border font-semibold">Kamis</td>
+              <td class="p-3 border">Bubur kacang hijau + roti tawar</td>
+              <td class="p-3 border">Nasi uduk + tahu tempe + lalapan</td>
+              <td class="p-3 border">Capcay + nasi merah</td>
+            </tr>
+            <tr class="hover:bg-green-50">
+              <td class="p-3 border font-semibold">Jumat</td>
+              <td class="p-3 border">Sereal gandum + susu rendah lemak</td>
+              <td class="p-3 border">Pecel lele + nasi putih</td>
+              <td class="p-3 border">Sayur lodeh + tempe goreng</td>
+            </tr>
+            <tr class="hover:bg-green-50">
+              <td class="p-3 border font-semibold">Sabtu</td>
+              <td class="p-3 border">Pisang + roti isi selai kacang</td>
+              <td class="p-3 border">Nasi kuning + telur balado</td>
+              <td class="p-3 border">Sup jagung + tahu kukus</td>
+            </tr>
+            <tr class="hover:bg-green-50">
+              <td class="p-3 border font-semibold">Minggu</td>
+              <td class="p-3 border">Salad buah + yogurt</td>
+              <td class="p-3 border">Nasi putih + ayam panggang + sayur bayam</td>
+              <td class="p-3 border">Tumis kangkung + telur dadar</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <footer class="text-center text-sm text-gray-500 mt-6">
+        Disusun untuk mendukung gaya hidup sehat dan ramah lingkungan 🌱
+      </footer>
+    </section>
+
+    <section id="olahraga" class="section hidden">
+      <h1 class="text-3xl font-bold text-green-800 mb-2 text-center">🏃 Panduan Olahraga Ringan</h1>
+      <p class="text-center text-green-600 mb-6">Kalender aktivitas sehat untuk seminggu</p>
+      <div class="overflow-x-auto max-w-4xl mx-auto">
+        <table class="w-full table-auto border border-green-300 bg-white shadow rounded-lg">
+          <thead class="bg-green-100 text-green-800">
+            <tr>
+              <th class="p-3 border">Hari</th>
+              <th class="p-3 border">Jenis Olahraga</th>
+              <th class="p-3 border">Durasi</th>
+              <th class="p-3 border">Catatan</th>
+            </tr>
+          </thead>
+          <tbody class="text-sm">
+            <tr class="hover:bg-green-50">
+              <td class="p-3 border font-semibold">Senin</td>
+              <td class="p-3 border">Jalan kaki santai</td>
+              <td class="p-3 border">30 menit</td>
+              <td class="p-3 border">Pagi hari di sekitar rumah</td>
+            </tr>
+            <tr class="hover:bg-green-50">
+              <td class="p-3 border font-semibold">Selasa</td>
+              <td class="p-3 border">Yoga ringan</td>
+              <td class="p-3 border">20 menit</td>
+              <td class="p-3 border">Fokus peregangan dan pernapasan</td>
+            </tr>
+            <tr class="hover:bg-green-50">
+              <td class="p-3 border font-semibold">Rabu</td>
+              <td class="p-3 border">Bersepeda</td>
+              <td class="p-3 border">30 menit</td>
+              <td class="p-3 border">Gunakan jalur aman</td>
+            </tr>
+            <tr class="hover:bg-green-50">
+              <td class="p-3 border font-semibold">Kamis</td>
+              <td class="p-3 border">Senam peregangan</td>
+              <td class="p-3 border">15 menit</td>
+              <td class="p-3 border">Sebelum tidur</td>
+            </tr>
+            <tr class="hover:bg-green-50">
+              <td class="p-3 border font-semibold">Jumat</td>
+              <td class="p-3 border">Jogging ringan</td>
+              <td class="p-3 border">20 menit</td>
+              <td class="p-3 border">Sore hari di taman</td>
+            </tr>
+            <tr class="hover:bg-green-50">
+              <td class="p-3 border font-semibold">Sabtu</td>
+              <td class="p-3 border">Naik turun tangga</td>
+              <td class="p-3 border">10 menit</td>
+              <td class="p-3 border">Di rumah atau kantor</td>
+            </tr>
+            <tr class="hover:bg-green-50">
+              <td class="p-3 border font-semibold">Minggu</td>
+              <td class="p-3 border">Jalan santai</td>
+              <td class="p-3 border">30 menit</td>
+              <td class="p-3 border">Bersama keluarga</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <footer class="text-center text-sm text-gray-500 mt-6">
+        Jadwal ini dapat disesuaikan sesuai kebutuhan dan kondisi tubuh 🌱
+      </footer>
+    </section>
+  </div>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>
